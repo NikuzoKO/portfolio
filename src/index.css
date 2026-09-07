@@ -1,8 +1,18 @@
 @import url("https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&display=swap");
+@import "tailwindcss";
 
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@theme {
+    --color-purple-darkest: #15152a;
+    --color-purple-dark: #1E1E3F;
+    --color-purple-mid: #6943FF;
+    --color-purple-light: #A599E9;
+    --color-purple-accent: #FAD000;
+    --color-purple-pink: #FB94FF;
+    --color-purple-alert: #FF628C;
+    --color-purple-green: #3AD900;
+
+    --font-mono: "JetBrains Mono", monospace;
+}
 
 * {
     margin: 0;

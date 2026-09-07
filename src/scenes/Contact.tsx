@@ -100,7 +100,7 @@ export default function Contact({ lang }: { lang: Lang }) {
                     className="grid grid-cols-2 gap-4"
                 >
                     <a
-                        href="mailto:nikibuela@gmail.com"
+                        href="mailto:buelaniki@gmail.com"
                         className="border border-purple-mid text-purple-light px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
                     >
                         ✉ {t.email}

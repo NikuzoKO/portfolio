@@ -188,7 +188,7 @@ export default function Hero({ lang }: { lang: Lang }) {
                                 className="border border-purple-mid text-purple-light px-6 py-2 rounded hover:bg-purple-mid hover:text-white transition-all text-sm">
                                 LinkedIn
                             </a>
-                            <a href="mailto:nikibuela@gmail.com"
+                            <a href="mailto:buelaniki@gmail.com"
                                 className="bg-purple-mid text-white px-6 py-2 rounded hover:bg-purple-accent hover:text-purple-darkest transition-all text-sm font-bold">
                                 {lang === "en" ? "Contact" : "Contacto"}
                             </a>

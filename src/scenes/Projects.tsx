@@ -4,6 +4,66 @@ import type { Lang } from "../App";
 
 const projects = [
     {
+        name: "THE DISCIPLE",
+        status: { en: "IN PROGRESS", es: "EN PROGRESO" },
+        type: { en: "MAIN QUEST", es: "MISIÓN PRINCIPAL" },
+        desc: {
+            en: "Godot 4.7 roguelite combining Dark Souls-style combat with Diablo/PoE-style loot and skill trees. PC first, console/mobile ports planned.",
+            es: "Roguelite en Godot 4.7 que combina combate estilo Dark Souls con loot y árbol de habilidades estilo Diablo/PoE. PC primero, con puertos a consola/móvil planeados.",
+        },
+        stack: ["Godot", "GDScript"],
+        url: "https://github.com/NikuzoKO/the-disciple",
+        color: "#FF628C",
+    },
+    {
+        name: "SKYTRIM",
+        status: { en: "IN PROGRESS", es: "EN PROGRESO" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Fabric client mod for Hypixel Skyblock — custom HUD, live Hypixel API integration, generic menu re-skinning, dungeon/garden/auction tooling.",
+            es: "Mod cliente Fabric para Hypixel Skyblock — HUD personalizado, integración en vivo con la API de Hypixel, re-skinning de menús genéricos, herramientas de mazmorras/jardín/subastas.",
+        },
+        stack: ["Java", "Fabric", "Hypixel API"],
+        url: "https://github.com/NikuzoKO/skytrim",
+        color: "#3AD900",
+    },
+    {
+        name: "RUBBLE STONE",
+        status: { en: "EARLY PROTOTYPE", es: "PROTOTIPO TEMPRANO" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Dark-fantasy tower-defense/deckbuilder hybrid (Loop Hero meets Plants vs. Zombies), Godot + GodotJS.",
+            es: "Híbrido de tower-defense/deckbuilder de fantasía oscura (Loop Hero + Plants vs. Zombies), Godot + GodotJS.",
+        },
+        stack: ["Godot", "GodotJS", "TypeScript"],
+        url: "https://github.com/NikuzoKO/rubble-stone",
+        color: "#6943FF",
+    },
+    {
+        name: "MUSICLI",
+        status: { en: "IN PROGRESS", es: "EN PROGRESO" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Terminal YouTube music player — Ink/React UI, mpv-driven playback over IPC, yt-dlp search.",
+            es: "Reproductor de música de YouTube en terminal — UI con Ink/React, reproducción vía mpv por IPC, búsqueda con yt-dlp.",
+        },
+        stack: ["TypeScript", "Ink/React", "mpv"],
+        url: "https://github.com/NikuzoKO/musicli",
+        color: "#FAD000",
+    },
+    {
+        name: "COMPACTA",
+        status: { en: "COMPLETED ✓", es: "COMPLETADO ✓" },
+        type: { en: "MAIN QUEST", es: "MISIÓN PRINCIPAL" },
+        desc: {
+            en: "Full-stack Laravel API + React frontend, shipped and live in production.",
+            es: "Fullstack con API Laravel + frontend React, en producción.",
+        },
+        stack: ["React", "Laravel", "MySQL"],
+        url: "https://compacta.net.uy",
+        color: "#FB94FF",
+    },
+    {
         name: "FARO CONSTRUCTORA",
         status: { en: "COMPLETED ✓", es: "COMPLETADO ✓" },
         type: { en: "MAIN QUEST", es: "MISIÓN PRINCIPAL" },
