@@ -25,6 +25,10 @@ jobs:
           cache: npm
       - run: npm ci
       - run: npm run build
+        env:
+          VITE_SUPABASE_URL: https://rqzqbchnqamznevmcpkc.supabase.co
+          VITE_SUPABASE_ANON_KEY: sb_publishable_7d0VcASs1abVA8Yhqan27A_TkGLWr6-
+          VITE_BOOKING_URL: https://cal.com/niki-buela-3klwoh/15min
       - uses: actions/upload-pages-artifact@v3
         with:
           path: dist

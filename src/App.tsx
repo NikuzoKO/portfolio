@@ -6,11 +6,21 @@ import Projects from "./scenes/Projects";
 import Contact from "./scenes/Contact";
 import AudioPlayer from "./components/AudioPlayer";
 import LangToggle from "./components/LangToggle";
+import PlayerHud from "./components/PlayerHud";
+import TrackedSection from "./game/TrackedSection";
+import { useGame, useKonami } from "./game/useGame";
 
 export type Lang = "en" | "es";
 
 function App() {
     const [lang, setLang] = useState<Lang>("en");
+    const { award } = useGame();
+
+    useKonami(() => award("konami"));
+
+    useEffect(() => {
+        if (lang !== "en") award("polyglot");
+    }, [lang, award]);
 
     useEffect(() => {
         const handleKey = (e: KeyboardEvent) => {
@@ -26,11 +36,24 @@ function App() {
         <div className="relative">
             <LangToggle lang={lang} setLang={setLang} />
             <AudioPlayer />
-            <Hero lang={lang} />
-            <About lang={lang} />
-            <Skills lang={lang} />
-            <Projects lang={lang} />
-            <Contact lang={lang} />
+            <div className="fixed bottom-4 left-4 z-50 text-xs text-white">
+                <PlayerHud />
+            </div>
+            <TrackedSection achievement="seen_hero">
+                <Hero lang={lang} />
+            </TrackedSection>
+            <TrackedSection achievement="seen_about">
+                <About lang={lang} />
+            </TrackedSection>
+            <TrackedSection achievement="seen_skills">
+                <Skills lang={lang} />
+            </TrackedSection>
+            <TrackedSection achievement="seen_projects">
+                <Projects lang={lang} />
+            </TrackedSection>
+            <TrackedSection achievement="seen_contact">
+                <Contact lang={lang} />
+            </TrackedSection>
         </div>
     );
 }

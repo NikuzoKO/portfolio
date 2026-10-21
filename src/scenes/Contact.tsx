@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import type { Lang } from "../App";
+import ContactQuest from "../components/ContactQuest";
 
 const content = {
     en: {
@@ -128,6 +129,10 @@ export default function Contact({ lang }: { lang: Lang }) {
                         📄 {t.cv}
                     </a>
                 </motion.div>
+
+                <div className="mt-10 text-purple-light text-sm">
+                    <ContactQuest />
+                </div>
 
                 <motion.p
                     initial={{ opacity: 0 }}
