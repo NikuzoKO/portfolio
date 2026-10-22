@@ -77,7 +77,7 @@ export default function Skills({ lang }: { lang: Lang }) {
                     {/* Menu */}
                     <div className="border border-purple-mid rounded overflow-hidden"
                         style={{ boxShadow: "0 0 20px #6943FF22" }}>
-                        <div className="bg-purple-mid bg-opacity-20 px-4 py-2 text-xs text-purple-mid tracking-widest">
+                        <div className="bg-purple-mid/20 px-4 py-2 text-xs text-purple-mid tracking-widest">
                             {lang === "en" ? "SELECT SKILL" : "SELECCIONAR HABILIDAD"}
                         </div>
                         {skills.map((skill, i) => (
@@ -85,10 +85,10 @@ export default function Skills({ lang }: { lang: Lang }) {
                                 key={i}
                                 onClick={() => setSelected(i)}
                                 whileHover={{ x: 4 }}
-                                className={`w-full text-left px-4 py-3 text-sm flex items-center gap-3 transition-all border-b border-purple-mid border-opacity-20 ${
+                                className={`w-full text-left px-4 py-3 text-sm flex items-center gap-3 transition-all border-b border-purple-mid/20 ${
                                     selected === i
-                                        ? "bg-purple-mid bg-opacity-30 text-white"
-                                        : "text-purple-light hover:bg-purple-mid hover:bg-opacity-10"
+                                        ? "bg-purple-mid/30 text-white"
+                                        : "text-purple-light hover:bg-purple-mid/10"
                                 }`}
                             >
                                 <span>{skill.icon}</span>

@@ -11,6 +11,7 @@ export default function PlayerHud() {
     const { xp, level, recentUnlock } = useGame();
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
+    const [expanded, setExpanded] = useState(false);
 
     const handleMagicLink = async (event: React.FormEvent) => {
         event.preventDefault();
@@ -25,13 +26,18 @@ export default function PlayerHud() {
 
     return (
         <div>
-            <p>
-                LV {level} · {xp} XP ({xp % XP_PER_LEVEL}/{XP_PER_LEVEL})
-            </p>
+            <button onClick={() => setExpanded((current) => !current)}>
+                LV {level} · {xp} XP {expanded ? "▾" : "▸"}
+            </button>
             {recentUnlock && (
                 <p>Achievement: {ACHIEVEMENTS[recentUnlock].title}</p>
             )}
-            {user ? (
+            {expanded && (
+                <p>
+                    {xp % XP_PER_LEVEL}/{XP_PER_LEVEL} XP to next level
+                </p>
+            )}
+            {expanded && (user ? (
                 <button onClick={signOut}>Sign out ({user.email})</button>
             ) : (
                 <div>
@@ -52,8 +58,8 @@ export default function PlayerHud() {
                     </form>
                     {!configured && <p>Login not configured yet.</p>}
                 </div>
-            )}
-            {message && <p>{message}</p>}
+            ))}
+            {expanded && message && <p>{message}</p>}
         </div>
     );
 }

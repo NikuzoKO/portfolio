@@ -44,7 +44,7 @@ export const ACHIEVEMENTS: Record<AchievementId, Achievement> = {
     },
     polyglot: {
         title: "Polyglot",
-        description: "Switched the language",
+        description: "Switched the language (press L)",
         xp: 25,
     },
     konami: {
@@ -73,6 +73,14 @@ export const ACHIEVEMENT_IDS = Object.keys(ACHIEVEMENTS) as AchievementId[];
 
 export const XP_PER_LEVEL = 100;
 export const CONTACT_QUEST_UNLOCK_XP = 100;
+
+// Achievements worth pointing a visitor at when the contact quest is still locked.
+export const HINTABLE_IDS: AchievementId[] = [
+    "polyglot",
+    "signed_in",
+    "booked_call",
+    "konami",
+];
 
 export const isAchievementId = (value: string): value is AchievementId =>
     value in ACHIEVEMENTS;

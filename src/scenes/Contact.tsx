@@ -36,7 +36,7 @@ export default function Contact({ lang }: { lang: Lang }) {
     const t = content[lang];
 
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-darkest px-6 py-20">
+        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-darkest px-6 pt-20 pb-28">
             <div
                 className="absolute inset-0 opacity-10"
                 style={{
@@ -86,7 +86,7 @@ export default function Contact({ lang }: { lang: Lang }) {
                     {[t.available, t.remote, t.languages].map((badge, i) => (
                         <span
                             key={i}
-                            className="text-xs px-3 py-1 rounded border border-purple-mid text-purple-mid"
+                            className="text-xs px-3 py-1 rounded border border-purple-mid text-purple-mid mr-0"
                         >
                             {badge}
                         </span>
@@ -102,28 +102,28 @@ export default function Contact({ lang }: { lang: Lang }) {
                 >
                     <a
                         href="mailto:buelaniki@gmail.com"
-                        className="border border-purple-mid text-purple-light px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
+                        className="border border-purple-mid text-purple-light mr-0 px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
                     >
                         ✉ {t.email}
                     </a>
                     <a
                         href="https://linkedin.com/in/niki-buela"
                         target="_blank"
-                        className="border border-purple-mid text-purple-light px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
+                        className="border border-purple-mid text-purple-light mr-0 px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
                     >
                         💼 {t.linkedin}
                     </a>
                     <a
                         href="https://github.com/NikuzoKo"
                         target="_blank"
-                        className="border border-purple-mid text-purple-light px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
+                        className="border border-purple-mid text-purple-light mr-0 px-6 py-4 rounded hover:bg-purple-mid hover:text-white transition-all text-sm"
                     >
                         🐙 {t.github}
                     </a>
                     <a
                         href="https://nikuzoko.github.io/curriculum/"
                         target="_blank"
-                        className="bg-purple-mid text-white px-6 py-4 rounded hover:bg-purple-accent hover:text-purple-darkest transition-all text-sm font-bold"
+                        className="bg-purple-mid text-white mr-0 px-6 py-4 rounded hover:bg-purple-accent hover:text-purple-darkest transition-all text-sm font-bold"
                         style={{ boxShadow: "0 0 20px #6943FF44" }}
                     >
                         📄 {t.cv}

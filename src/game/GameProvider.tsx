@@ -6,6 +6,7 @@ import { supabase } from "../lib/supabase";
 import { GameContext } from "./GameContext";
 import {
     CONTACT_QUEST_UNLOCK_XP,
+    HINTABLE_IDS,
     calculateLevel,
     calculateXp,
     isAchievementId,
@@ -75,6 +76,11 @@ export default function GameProvider({ children }: { children: ReactNode }) {
         (id: AchievementId) => {
             if (unlockedRef.current.includes(id)) return;
             setRecentUnlock(id);
+            setTimeout(
+                () =>
+                    setRecentUnlock((current) => (current === id ? null : current)),
+                4000,
+            );
             persist([...unlockedRef.current, id]);
         },
         [persist],
@@ -122,6 +128,7 @@ export default function GameProvider({ children }: { children: ReactNode }) {
                 xp,
                 level: calculateLevel(xp),
                 questUnlocked: xp >= CONTACT_QUEST_UNLOCK_XP,
+                hints: HINTABLE_IDS.filter((id) => !unlocked.includes(id)),
                 recentUnlock,
                 award,
             }}

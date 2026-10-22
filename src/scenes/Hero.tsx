@@ -104,7 +104,7 @@ export default function Hero({ lang }: { lang: Lang }) {
                     >
                         {/* Dialog box */}
                         <div
-                            className="border-2 border-purple-mid bg-purple-darkest bg-opacity-95 p-6 rounded cursor-pointer select-none"
+                            className="border-2 border-purple-mid bg-purple-darkest/95 p-6 rounded cursor-pointer select-none"
                             style={{ boxShadow: "0 0 30px #6943FF44" }}
                             onClick={handleNext}
                         >

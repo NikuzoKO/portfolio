@@ -7,6 +7,7 @@ export type GameContextValue = {
     xp: number;
     level: number;
     questUnlocked: boolean;
+    hints: AchievementId[];
     recentUnlock: AchievementId | null;
     award: (id: AchievementId) => void;
 };

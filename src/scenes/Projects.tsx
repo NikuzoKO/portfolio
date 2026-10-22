@@ -148,21 +148,21 @@ export default function Projects({ lang }: { lang: Lang }) {
                             whileHover={{ x: 4 }}
                             className={`w-full text-left border rounded px-4 py-3 transition-all ${
                                 selected === i
-                                    ? "border-purple-mid bg-purple-mid bg-opacity-20"
-                                    : "border-purple-mid border-opacity-30 hover:border-opacity-60"
+                                    ? "border-purple-mid bg-purple-mid/20"
+                                    : "border-purple-mid/30 hover:border-purple-mid/60"
                             }`}
                         >
-                            <div className="flex items-center justify-between">
+                            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
                                 <div className="flex items-center gap-3">
                                     <span
-                                        className="w-2 h-2 rounded-full"
+                                        className="w-2 h-2 rounded-full mr-0 shrink-0"
                                         style={{ backgroundColor: project.color, boxShadow: `0 0 6px ${project.color}` }}
                                     />
-                                    <span className="text-white text-sm font-bold">{project.name}</span>
+                                    <span className="text-white text-sm font-bold mr-0">{project.name}</span>
                                 </div>
-                                <div className="flex items-center gap-4">
-                                    <span className="text-purple-mid text-xs">{project.type[lang]}</span>
-                                    <span className="text-purple-green text-xs">{project.status[lang]}</span>
+                                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pl-5 sm:pl-0">
+                                    <span className="text-purple-mid text-xs mr-0">{project.type[lang]}</span>
+                                    <span className="text-purple-green text-xs mr-0">{project.status[lang]}</span>
                                 </div>
                             </div>
                         </motion.button>

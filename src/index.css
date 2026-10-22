@@ -14,15 +14,10 @@
     --font-mono: "JetBrains Mono", monospace;
 }
 
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
+    overflow-x: clip;
 }
 
 body {
@@ -32,20 +27,22 @@ body {
     overflow-x: hidden;
 }
 
-a {
-    color: darkgoldenrod;
-    text-decoration: none;
-    margin-right: 25px;
-    &:hover {
-        text-decoration: underline;
+@layer base {
+    a {
+        color: darkgoldenrod;
+        text-decoration: none;
+        margin-right: 25px;
+        &:hover {
+            text-decoration: underline;
+        }
+        &:active {
+            color: aqua;
+        }
     }
-    &:active {
-        color: aqua;
-    }
-}
 
-span {
-    margin-right: 25px;
+    span {
+        margin-right: 25px;
+    }
 }
 
 ::-webkit-scrollbar {

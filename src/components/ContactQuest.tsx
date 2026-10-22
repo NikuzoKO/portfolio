@@ -2,7 +2,7 @@ import { useState } from "react";
 
 import { useAuth } from "../auth/useAuth";
 import { useGame } from "../game/useGame";
-import { CONTACT_QUEST_UNLOCK_XP } from "../game/gameConfig";
+import { ACHIEVEMENTS, CONTACT_QUEST_UNLOCK_XP } from "../game/gameConfig";
 import { bookingUrl, hasBookingUrl } from "../lib/supabase";
 import { submitContactQuest } from "../lib/contactQuest";
 
@@ -11,7 +11,7 @@ type SubmitStatus = "idle" | "sending" | "sent" | "error";
 // Logic-wired placeholder: restyle/re-layout freely, the hooks are the contract.
 export default function ContactQuest() {
     const { user } = useAuth();
-    const { xp, questUnlocked, award } = useGame();
+    const { xp, questUnlocked, hints, award } = useGame();
     const [name, setName] = useState("");
     const [company, setCompany] = useState("");
     const [email, setEmail] = useState("");
@@ -53,10 +53,17 @@ export default function ContactQuest() {
             )}
 
             {!questUnlocked ? (
-                <p>
-                    Contact quest locked: {xp}/{CONTACT_QUEST_UNLOCK_XP} XP.
-                    Keep exploring.
-                </p>
+                <div>
+                    <p>
+                        Contact quest locked: {xp}/{CONTACT_QUEST_UNLOCK_XP} XP.
+                    </p>
+                    {hints.slice(0, 2).map((hint) => (
+                        <p key={hint}>
+                            Try: {ACHIEVEMENTS[hint].title} (+
+                            {ACHIEVEMENTS[hint].xp} XP), {ACHIEVEMENTS[hint].description}
+                        </p>
+                    ))}
+                </div>
             ) : !user ? (
                 <p>Sign in (top HUD) to accept the quest.</p>
             ) : status === "sent" ? (

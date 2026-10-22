@@ -33,10 +33,10 @@ function App() {
     }, []);
 
     return (
-        <div className="relative">
+        <div className="relative overflow-x-clip">
             <LangToggle lang={lang} setLang={setLang} />
             <AudioPlayer />
-            <div className="fixed bottom-4 left-4 z-50 text-xs text-white">
+            <div className="fixed bottom-4 left-4 z-50 max-w-[calc(100vw-8rem)] text-xs text-white">
                 <PlayerHud />
             </div>
             <TrackedSection achievement="seen_hero">
