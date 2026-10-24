@@ -192,11 +192,11 @@ export default function Projects({ lang }: { lang: Lang }) {
                         ))}
                     </div>
                     <div
-                        className={`pointer-events-none absolute left-0 right-[10px] top-0 h-12 rounded-t backdrop-blur-[3px] bg-gradient-to-b from-purple-dark to-transparent transition-opacity duration-200 ${canScrollUp ? "opacity-100" : "opacity-0"}`}
+                        className={`pointer-events-none absolute -left-4 right-[8px] top-0 h-16 backdrop-blur-[8px] bg-gradient-to-b from-purple-dark to-transparent transition-opacity duration-200 ${canScrollUp ? "opacity-100" : "opacity-0"}`}
                         style={{ maskImage: "linear-gradient(to bottom, black, transparent)", WebkitMaskImage: "linear-gradient(to bottom, black, transparent)" }}
                     />
                     <div
-                        className={`pointer-events-none absolute left-0 right-[10px] bottom-0 h-12 rounded-b backdrop-blur-[3px] bg-gradient-to-t from-purple-dark to-transparent transition-opacity duration-200 ${canScrollDown ? "opacity-100" : "opacity-0"}`}
+                        className={`pointer-events-none absolute -left-4 right-[8px] bottom-0 h-16 backdrop-blur-[8px] bg-gradient-to-t from-purple-dark to-transparent transition-opacity duration-200 ${canScrollDown ? "opacity-100" : "opacity-0"}`}
                         style={{ maskImage: "linear-gradient(to top, black, transparent)", WebkitMaskImage: "linear-gradient(to top, black, transparent)" }}
                     />
                 </div>
