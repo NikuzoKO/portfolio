@@ -117,7 +117,7 @@ export default function Projects({ lang }: { lang: Lang }) {
     const [selected, setSelected] = useState(0);
 
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-dark px-6 py-20">
+        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-dark px-6 py-12 sm:py-20">
             <div className="relative z-10 max-w-4xl w-full">
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -130,14 +130,14 @@ export default function Projects({ lang }: { lang: Lang }) {
                 <motion.h2
                     initial={{ x: -20, opacity: 0 }}
                     whileInView={{ x: 0, opacity: 1 }}
-                    className="text-4xl font-bold text-white mb-8"
+                    className="text-4xl font-bold text-white mb-4 sm:mb-8"
                     style={{ textShadow: "0 0 20px #6943FF" }}
                 >
                     {lang === "en" ? "QUEST LOG" : "REGISTRO DE MISIONES"}
                 </motion.h2>
 
                 {/* Quest list */}
-                <div className="space-y-3 mb-6">
+                <div className="space-y-3 mb-6 max-h-[30vh] sm:max-h-[36vh] overflow-y-auto overscroll-contain pr-2">
                     {projects.map((project, i) => (
                         <motion.button
                             key={i}
