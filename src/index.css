@@ -60,3 +60,23 @@ section {
     min-height: 100vh;
     scroll-snap-align: start;
 }
+
+.quest-scroll {
+    scrollbar-gutter: stable;
+}
+
+.quest-scroll::-webkit-scrollbar {
+    width: 8px;
+}
+
+.quest-scroll::-webkit-scrollbar-track {
+    background: #15152a;
+    border-radius: 4px;
+}
+
+@supports not selector(::-webkit-scrollbar) {
+    .quest-scroll {
+        scrollbar-width: thin;
+        scrollbar-color: #6943ff #15152a;
+    }
+}

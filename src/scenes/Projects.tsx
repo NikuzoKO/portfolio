@@ -117,7 +117,7 @@ export default function Projects({ lang }: { lang: Lang }) {
     const [selected, setSelected] = useState(0);
 
     return (
-        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-dark px-6 py-12 sm:py-20">
+        <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-dark px-6 py-12 sm:py-14">
             <div className="relative z-10 max-w-4xl w-full">
                 <motion.p
                     initial={{ opacity: 0 }}
@@ -137,7 +137,7 @@ export default function Projects({ lang }: { lang: Lang }) {
                 </motion.h2>
 
                 {/* Quest list */}
-                <div className="space-y-3 mb-6 max-h-[30vh] sm:max-h-[36vh] overflow-y-auto overscroll-contain pr-2">
+                <div className="space-y-3 mb-6 max-h-[34vh] sm:max-h-[42vh] overflow-y-scroll quest-scroll overscroll-contain pr-2">
                     {projects.map((project, i) => (
                         <motion.button
                             key={i}
