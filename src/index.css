@@ -17,14 +17,12 @@
 html {
     scroll-behavior: smooth;
     scroll-snap-type: y mandatory;
-    overflow-x: clip;
 }
 
 body {
     background-color: #15152a;
     color: #a599e9;
     font-family: "JetBrains Mono", monospace;
-    overflow-x: hidden;
 }
 
 @layer base {
