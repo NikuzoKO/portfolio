@@ -12,7 +12,8 @@ const projects = [
             es: "Roguelite en Godot 4.7 que combina combate estilo Dark Souls con loot y árbol de habilidades estilo Diablo/PoE. PC primero, con puertos a consola/móvil planeados.",
         },
         stack: ["Godot", "GDScript"],
-        url: "https://github.com/NikuzoKO/the-disciple",
+        url: "",
+        private: true,
         color: "#FF628C",
     },
     {
@@ -61,6 +62,7 @@ const projects = [
         },
         stack: ["React", "Laravel", "MySQL"],
         url: "https://compacta.net.uy",
+        private: true,
         color: "#FB94FF",
     },
     {
@@ -73,6 +75,7 @@ const projects = [
         },
         stack: ["React", "Laravel", "MySQL", "Docker", "cPanel"],
         url: "https://faro.net.uy",
+        private: true,
         color: "#FAD000",
     },
     {
@@ -84,7 +87,8 @@ const projects = [
             es: "App fullstack de seguimiento bursátil. Frontend React con búsqueda en tiempo real. API Laravel con autenticación Sanctum.",
         },
         stack: ["React", "Laravel", "Sanctum", "MySQL"],
-        url: "https://github.com/NikuzoKo/stockDashboardFront",
+        url: "",
+        private: true,
         color: "#6943FF",
     },
     {
@@ -110,6 +114,207 @@ const projects = [
         stack: ["React", "Bootstrap", "Redux"],
         url: "",
         color: "#3AD900",
+    },
+    {
+        name: "CURRICULUM",
+        status: { en: "TypeScript", es: "TypeScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Interactive CV, also rendered to the PDF behind the Download CV button.",
+            es: "CV interactivo, también renderizado al PDF del botón Descargar CV.",
+        },
+        stack: ["TypeScript"],
+        url: "https://github.com/NikuzoKO/curriculum",
+        color: "#FF628C",
+    },
+    {
+        name: "PORTFOLIO",
+        status: { en: "TypeScript", es: "TypeScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "This site — React, Tailwind and a Supabase-backed XP system.",
+            es: "Este sitio — React, Tailwind y un sistema de XP con Supabase.",
+        },
+        stack: ["TypeScript"],
+        url: "https://github.com/NikuzoKO/portfolio",
+        color: "#3AD900",
+    },
+    {
+        name: "GLYPHFALL",
+        status: { en: "Python", es: "Python" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Terminal ARPG: classless skill-swap builds, affix loot, infinite passive grid. Python curses/pygame, web build via pygbag.",
+            es: "ARPG de terminal: builds sin clases con habilidades intercambiables, loot con afijos, grilla pasiva infinita. Python curses/pygame, build web con pygbag.",
+        },
+        stack: ["Python"],
+        url: "https://github.com/NikuzoKO/glyphfall",
+        color: "#6943FF",
+    },
+    {
+        name: "PMOS MOTO G06",
+        status: { en: "Python", es: "Python" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "WIP postmarketOS port for the Motorola Moto G06 (lagos, MT6768): boots to systemd on the stock GKI kernel + vendor modules.",
+            es: "Port de postmarketOS en desarrollo para el Motorola Moto G06 (lagos, MT6768): arranca a systemd con el kernel GKI de stock + módulos del vendor.",
+        },
+        stack: ["Python"],
+        url: "https://github.com/NikuzoKO/pmos-moto-g06-lagos",
+        color: "#FAD000",
+    },
+    {
+        name: "ANDROID TRANSLATION LAYER",
+        status: { en: "Java", es: "Java" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Fork of Android Translation Layer with fixes to run WhatsApp on a Linux phone.",
+            es: "Fork de Android Translation Layer con arreglos para correr WhatsApp en un teléfono Linux.",
+        },
+        stack: ["Java"],
+        url: "https://github.com/NikuzoKO/android_translation_layer",
+        color: "#FB94FF",
+    },
+    {
+        name: "BIONIC TRANSLATION",
+        status: { en: "C", es: "C" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Fork of bionic_translation with libc fixes (getaddrinfo/getnameinfo flags, readdir) found running WhatsApp via ATL.",
+            es: "Fork de bionic_translation con arreglos de libc (flags de getaddrinfo/getnameinfo, readdir) encontrados al correr WhatsApp vía ATL.",
+        },
+        stack: ["C"],
+        url: "https://github.com/NikuzoKO/bionic_translation",
+        color: "#FF628C",
+    },
+    {
+        name: "MTG CARD ART VIEWER",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Public repository on GitHub.",
+            es: "Repositorio público en GitHub.",
+        },
+        stack: ["JavaScript"],
+        url: "https://github.com/NikuzoKO/mtgCardArtViewer",
+        color: "#3AD900",
+    },
+    {
+        name: "TOO HEAVY PROJECT",
+        status: { en: "C#", es: "C#" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Videogame about shooting physics.",
+            es: "Videojuego sobre física de disparos.",
+        },
+        stack: ["C#"],
+        url: "",
+        private: true,
+        color: "#6943FF",
+    },
+    {
+        name: "RPG PROJECT",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Private repository.",
+            es: "Repositorio privado.",
+        },
+        stack: ["JavaScript"],
+        url: "",
+        private: true,
+        color: "#FAD000",
+    },
+    {
+        name: "PLAYME",
+        status: { en: "CSS", es: "CSS" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Private repository.",
+            es: "Repositorio privado.",
+        },
+        stack: ["CSS"],
+        url: "",
+        private: true,
+        color: "#FB94FF",
+    },
+    {
+        name: "IDLE PROJECT",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Private repository.",
+            es: "Repositorio privado.",
+        },
+        stack: ["JavaScript"],
+        url: "",
+        private: true,
+        color: "#FF628C",
+    },
+    {
+        name: "DUNGEON CRAWLER PUZZLE GAME",
+        status: { en: "C#", es: "C#" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Walking simulator.",
+            es: "Simulador de caminata.",
+        },
+        stack: ["C#"],
+        url: "",
+        private: true,
+        color: "#3AD900",
+    },
+    {
+        name: "DETECTIVE GAME",
+        status: { en: "C#", es: "C#" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Private repository.",
+            es: "Repositorio privado.",
+        },
+        stack: ["C#"],
+        url: "",
+        private: true,
+        color: "#6943FF",
+    },
+    {
+        name: "MTG UNIFICATED APP",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "An MTG app to have everything a Magic player needs.",
+            es: "Una app de MTG con todo lo que necesita un jugador de Magic.",
+        },
+        stack: ["JavaScript"],
+        url: "",
+        private: true,
+        color: "#FAD000",
+    },
+    {
+        name: "DOGMA",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Puzzle videogame on React.",
+            es: "Videojuego de puzzles en React.",
+        },
+        stack: ["JavaScript"],
+        url: "",
+        private: true,
+        color: "#FB94FF",
+    },
+    {
+        name: "EJERCICIO 17",
+        status: { en: "JavaScript", es: "JavaScript" },
+        type: { en: "SIDE QUEST", es: "MISIÓN SECUNDARIA" },
+        desc: {
+            en: "Private repository.",
+            es: "Repositorio privado.",
+        },
+        stack: ["JavaScript"],
+        url: "",
+        private: true,
+        color: "#FF628C",
     },
 ];
 
@@ -167,7 +372,7 @@ export default function Projects({ lang }: { lang: Lang }) {
                                 onClick={() => setSelected(i)}
                                 initial={{ opacity: 0, x: -20 }}
                                 whileInView={{ opacity: 1, x: 0 }}
-                                transition={{ delay: i * 0.1 }}
+                                transition={{ delay: Math.min(i, 6) * 0.08 }}
                                 whileHover={{ x: 4 }}
                                 className={`w-full text-left border rounded px-4 py-3 transition-all ${
                                     selected === i
@@ -182,6 +387,15 @@ export default function Projects({ lang }: { lang: Lang }) {
                                             style={{ backgroundColor: project.color, boxShadow: `0 0 6px ${project.color}` }}
                                         />
                                         <span className="text-white text-sm font-bold mr-0">{project.name}</span>
+                                        {project.private && (
+                                            <span
+                                                className="text-xs mr-0"
+                                                title={lang === "en" ? "Private repository" : "Repositorio privado"}
+                                                aria-label={lang === "en" ? "Private repository" : "Repositorio privado"}
+                                            >
+                                                🔒
+                                            </span>
+                                        )}
                                     </div>
                                     <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pl-5 sm:pl-0">
                                         <span className="text-purple-mid text-xs mr-0">{project.type[lang]}</span>
@@ -216,15 +430,22 @@ export default function Projects({ lang }: { lang: Lang }) {
                                 <h3 className="text-white font-bold text-xl">{projects[selected].name}</h3>
                                 <p className="text-purple-mid text-xs mt-1">{projects[selected].type[lang]}</p>
                             </div>
-                            {projects[selected].url && (
-                                <a
-                                    href={projects[selected].url}
-                                    target="_blank"
-                                    className="border border-purple-mid text-purple-light px-4 py-1 rounded text-xs hover:bg-purple-mid hover:text-white transition-all"
-                                >
-                                    {lang === "en" ? "VIEW PROJECT ↗" : "VER PROYECTO ↗"}
-                                </a>
-                            )}
+                            <div className="flex flex-wrap items-center justify-end gap-2">
+                                {projects[selected].private && (
+                                    <span className="text-purple-light text-xs mr-0 border border-purple-mid/50 px-3 py-1 rounded">
+                                        🔒 {lang === "en" ? "PRIVATE REPO" : "REPO PRIVADO"}
+                                    </span>
+                                )}
+                                {projects[selected].url && (
+                                    <a
+                                        href={projects[selected].url}
+                                        target="_blank"
+                                        className="border border-purple-mid text-purple-light px-4 py-1 rounded text-xs hover:bg-purple-mid hover:text-white transition-all"
+                                    >
+                                        {lang === "en" ? "VIEW PROJECT ↗" : "VER PROYECTO ↗"}
+                                    </a>
+                                )}
+                            </div>
                         </div>
                         <p className="text-purple-light text-sm leading-relaxed mb-4">
                             {projects[selected].desc[lang]}
