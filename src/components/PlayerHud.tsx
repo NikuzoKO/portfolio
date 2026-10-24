@@ -11,7 +11,7 @@ export default function PlayerHud() {
     const { xp, level, recentUnlock } = useGame();
     const [email, setEmail] = useState("");
     const [message, setMessage] = useState("");
-    const [expanded, setExpanded] = useState(false);
+    const [expanded, setExpanded] = useState(true);
 
     const handleMagicLink = async (event: React.FormEvent) => {
         event.preventDefault();

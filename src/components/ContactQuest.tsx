@@ -65,7 +65,7 @@ export default function ContactQuest() {
                     ))}
                 </div>
             ) : !user ? (
-                <p>Sign in (top HUD) to accept the quest.</p>
+                <p>Sign in (bottom-left HUD) to accept the quest.</p>
             ) : status === "sent" ? (
                 <p>Quest accepted. I'll reply soon.</p>
             ) : (
