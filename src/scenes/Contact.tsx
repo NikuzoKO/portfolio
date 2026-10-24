@@ -121,8 +121,8 @@ export default function Contact({ lang }: { lang: Lang }) {
                         🐙 {t.github}
                     </a>
                     <a
-                        href="https://nikuzoko.github.io/curriculum/"
-                        target="_blank"
+                        href={`${import.meta.env.BASE_URL}cv.pdf`}
+                        download="Niki-Buela-CV.pdf"
                         className="bg-purple-mid text-white mr-0 px-6 py-4 rounded hover:bg-purple-accent hover:text-purple-darkest transition-all text-sm font-bold"
                         style={{ boxShadow: "0 0 20px #6943FF44" }}
                     >
