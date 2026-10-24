@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import type { Lang } from "../App";
 
@@ -115,6 +115,24 @@ const projects = [
 
 export default function Projects({ lang }: { lang: Lang }) {
     const [selected, setSelected] = useState(0);
+    const [canScrollUp, setCanScrollUp] = useState(false);
+    const [canScrollDown, setCanScrollDown] = useState(false);
+    const questListRef = useRef<HTMLDivElement>(null);
+
+    const updateScrollFade = () => {
+        const questList = questListRef.current;
+        if (!questList) return;
+        setCanScrollUp(questList.scrollTop > 4);
+        setCanScrollDown(
+            questList.scrollTop + questList.clientHeight < questList.scrollHeight - 4,
+        );
+    };
+
+    useEffect(() => {
+        updateScrollFade();
+        window.addEventListener("resize", updateScrollFade);
+        return () => window.removeEventListener("resize", updateScrollFade);
+    }, []);
 
     return (
         <section className="relative flex flex-col items-center justify-center min-h-screen bg-purple-dark px-6 py-12 sm:py-14">
@@ -137,36 +155,50 @@ export default function Projects({ lang }: { lang: Lang }) {
                 </motion.h2>
 
                 {/* Quest list */}
-                <div className="space-y-3 mb-6 max-h-[34vh] sm:max-h-[42vh] overflow-y-scroll quest-scroll overscroll-contain pr-2">
-                    {projects.map((project, i) => (
-                        <motion.button
-                            key={i}
-                            onClick={() => setSelected(i)}
-                            initial={{ opacity: 0, x: -20 }}
-                            whileInView={{ opacity: 1, x: 0 }}
-                            transition={{ delay: i * 0.1 }}
-                            whileHover={{ x: 4 }}
-                            className={`w-full text-left border rounded px-4 py-3 transition-all ${
-                                selected === i
-                                    ? "border-purple-mid bg-purple-mid/20"
-                                    : "border-purple-mid/30 hover:border-purple-mid/60"
-                            }`}
-                        >
-                            <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
-                                <div className="flex items-center gap-3">
-                                    <span
-                                        className="w-2 h-2 rounded-full mr-0 shrink-0"
-                                        style={{ backgroundColor: project.color, boxShadow: `0 0 6px ${project.color}` }}
-                                    />
-                                    <span className="text-white text-sm font-bold mr-0">{project.name}</span>
+                <div className="relative mb-6">
+                    <div
+                        ref={questListRef}
+                        onScroll={updateScrollFade}
+                        className="space-y-3 max-h-[34vh] sm:max-h-[42vh] overflow-y-scroll quest-scroll overscroll-contain pr-2"
+                    >
+                        {projects.map((project, i) => (
+                            <motion.button
+                                key={i}
+                                onClick={() => setSelected(i)}
+                                initial={{ opacity: 0, x: -20 }}
+                                whileInView={{ opacity: 1, x: 0 }}
+                                transition={{ delay: i * 0.1 }}
+                                whileHover={{ x: 4 }}
+                                className={`w-full text-left border rounded px-4 py-3 transition-all ${
+                                    selected === i
+                                        ? "border-purple-mid bg-purple-mid/20"
+                                        : "border-purple-mid/30 hover:border-purple-mid/60"
+                                }`}
+                            >
+                                <div className="flex flex-col gap-1 sm:flex-row sm:items-center sm:justify-between">
+                                    <div className="flex items-center gap-3">
+                                        <span
+                                            className="w-2 h-2 rounded-full mr-0 shrink-0"
+                                            style={{ backgroundColor: project.color, boxShadow: `0 0 6px ${project.color}` }}
+                                        />
+                                        <span className="text-white text-sm font-bold mr-0">{project.name}</span>
+                                    </div>
+                                    <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pl-5 sm:pl-0">
+                                        <span className="text-purple-mid text-xs mr-0">{project.type[lang]}</span>
+                                        <span className="text-purple-green text-xs mr-0">{project.status[lang]}</span>
+                                    </div>
                                 </div>
-                                <div className="flex flex-wrap items-center gap-x-4 gap-y-1 pl-5 sm:pl-0">
-                                    <span className="text-purple-mid text-xs mr-0">{project.type[lang]}</span>
-                                    <span className="text-purple-green text-xs mr-0">{project.status[lang]}</span>
-                                </div>
-                            </div>
-                        </motion.button>
-                    ))}
+                            </motion.button>
+                        ))}
+                    </div>
+                    <div
+                        className={`pointer-events-none absolute left-0 right-[10px] top-0 h-12 rounded-t backdrop-blur-[3px] bg-gradient-to-b from-purple-dark to-transparent transition-opacity duration-200 ${canScrollUp ? "opacity-100" : "opacity-0"}`}
+                        style={{ maskImage: "linear-gradient(to bottom, black, transparent)", WebkitMaskImage: "linear-gradient(to bottom, black, transparent)" }}
+                    />
+                    <div
+                        className={`pointer-events-none absolute left-0 right-[10px] bottom-0 h-12 rounded-b backdrop-blur-[3px] bg-gradient-to-t from-purple-dark to-transparent transition-opacity duration-200 ${canScrollDown ? "opacity-100" : "opacity-0"}`}
+                        style={{ maskImage: "linear-gradient(to top, black, transparent)", WebkitMaskImage: "linear-gradient(to top, black, transparent)" }}
+                    />
                 </div>
 
                 {/* Detail panel */}
